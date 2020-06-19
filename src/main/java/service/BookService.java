@@ -31,6 +31,9 @@ public interface BookService {
 
     //query all books
     List<Books> queryAllBooks();
+
+    //query a book by name
+    Books queryBookByName(String name);
 }
 
 

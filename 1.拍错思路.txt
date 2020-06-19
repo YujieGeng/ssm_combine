@@ -1,0 +1,14 @@
+1、在spring-dao.xml里面，报错说file not found ，mybatis-config.xml找不到
+
+    <!--3.sqlSessionFactory-->
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--绑定mybatis配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    改之前没加classpath：。
+
+ 2.数据库连接问题
+ 把datasource.properties里面的url改了一下，删掉了？后面的东西就可以正常运行了

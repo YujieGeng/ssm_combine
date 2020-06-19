@@ -1,6 +1,7 @@
 package service;
 
 import dao.BookMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pojo.Books;
 
@@ -37,5 +38,10 @@ public class BookServiceImpl  implements BookService{
 
     public List<Books> queryAllBooks() {
         return bookMapper.queryAllBooks();
+    }
+
+    @Override
+    public Books queryBookByName(String name) {
+        return bookMapper.queryBookByName(name);
     }
 }
